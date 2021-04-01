@@ -1,14 +1,17 @@
 require 'rack-flash'
+require 'pry'
 
 class SongsController < ApplicationController
   use Rack::Flash
-
+# binding.pry
   get '/songs' do
+    binding.pry
     @songs = Song.all
     erb :'/songs/index'
   end
 
   get '/songs/new' do
+    binding.pry
     erb :'/songs/new'
   end
 
