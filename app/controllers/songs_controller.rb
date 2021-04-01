@@ -5,13 +5,13 @@ class SongsController < ApplicationController
   use Rack::Flash
 # binding.pry
   get '/songs' do
-    binding.pry
+    # binding.pry
     @songs = Song.all
     erb :'/songs/index'
   end
 
   get '/songs/new' do
-    binding.pry
+    # binding.pry
     erb :'/songs/new'
   end
 
